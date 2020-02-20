@@ -1,6 +1,3 @@
-
-// You should implement your task here.
-
-module.exports = function towelSort (matrix) {
-  return [];
+module.exports = function towelSort (arr) {
+  return arr ? arr.reduce((newArr, current, i) => !(i%2) ? [...newArr, ...current] : [...newArr, ...current.reverse()], []) : [];
 }
